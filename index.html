@@ -1,0 +1,313 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Define the character encoding for the HTML document.
+       UTF-8 allows the page to correctly display most characters and symbols. -->
+  <meta charset="UTF-8">
+
+  <!-- Make the page responsive on different screen sizes.
+       The viewport width will match the device's screen width. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link to the website favicon.
+       The favicon is the small icon displayed in the browser tab. -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./images/favicon-32x32.png"
+  >
+
+  <!-- Link the external CSS file to style the HTML elements. -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Page title shown in the browser tab. -->
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Small CSS used only for the Frontend Mentor attribution text. -->
+  <style>
+
+    /* Style the attribution text displayed at the bottom of the page. */
+    .attribution {
+      font-size: 0.6875rem;
+      text-align: center;
+    }
+
+    /* Style the links inside the attribution section. */
+    .attribution a {
+      color: rgb(138, 137, 138);
+      display: inline-block;
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <!-- Header section.
+       It is currently empty, but it is kept here for future use. -->
+  <header>
+
+  </header>
+
+
+  <!-- Main content of the Todo application. -->
+  <main>
+
+    <!-- Background image displayed behind the Todo application.
+         The image is positioned using CSS. -->
+    <img
+      id="bg-desktop"
+      src="./images/bg-desktop-dark.jpg"
+      alt="background image"
+      class="bg-desktop"
+    >
+
+
+    <!-- Section containing the main Todo title. -->
+    <section class="todo-container">
+
+      <!-- Main Todo title.
+           Each letter is placed inside a separate <span>
+           so that each letter can be animated independently with CSS. -->
+      <h1>
+
+        <!-- First letter of TODO. -->
+        <span>T</span>
+
+        <!-- Second letter of TODO. -->
+        <span>O</span>
+
+        <!-- Third letter of TODO. -->
+        <span>D</span>
+
+        <!-- Fourth letter of TODO. -->
+        <span>O</span>
+
+      </h1>
+
+    </section>
+
+
+    <!-- Main container for the Todo input and Todo list. -->
+    <section class="todo-container1">
+
+
+      <!-- ---------------- Create New Todo ---------------- -->
+
+      <!-- Container for creating a new Todo.
+           This is separate from .todo-item because it is used
+           for entering a new Todo rather than displaying an existing Todo. -->
+      <div class="todo-input">
+
+        <!-- Checkbox used as the circle/check control for creating a Todo.
+             This is currently only a visual control.
+             Later, JavaScript will give it a real function. -->
+        <input
+          type="checkbox"
+          aria-label="Mark new todo as completed"
+        >
+
+        <!-- Text input where the user can type a new Todo.
+             The placeholder gives the user an example of what to enter. -->
+        <input
+          type="text"
+          placeholder="Create a new todo..."
+        >
+
+      </div>
+
+
+      <!-- ---------------- Todo List ---------------- -->
+
+      <!-- Container that holds all existing Todo items and filters. -->
+      <div class="todo-list">
+
+
+        <!-- ---------------- Todo Item 1 ---------------- -->
+
+        <!-- Container for the first Todo item. -->
+        <div class="todo-item">
+
+          <!-- Checkbox used to mark this Todo as completed.
+               Each Todo has its own independent checkbox,
+               so multiple Todo items can be completed at the same time. -->
+          <input
+            type="checkbox"
+            aria-label="Mark Complete online JavaScript course as completed"
+          >
+
+          <!-- Text describing the Todo. -->
+          <span>Complete online JavaScript course</span>
+
+        </div>
+
+
+        <!-- ---------------- Todo Item 2 ---------------- -->
+
+        <!-- Container for the second Todo item. -->
+        <div class="todo-item">
+
+          <!-- Checkbox used to mark the Todo as completed.
+               The checkbox can be checked and unchecked independently. -->
+          <input
+            type="checkbox"
+            aria-label="Mark Job around the park 3x as completed"
+          >
+
+          <!-- Text describing the Todo. -->
+          <span>Job around the park 3x</span>
+
+        </div>
+
+
+        <!-- ---------------- Todo Item 3 ---------------- -->
+
+        <!-- Container for the third Todo item. -->
+        <div class="todo-item">
+
+          <!-- Checkbox used to mark the Todo as completed.
+               The checkbox can be checked and unchecked independently. -->
+          <input
+            type="checkbox"
+            aria-label="Mark 10 minutes of meditation as completed"
+          >
+
+          <!-- Text describing the Todo. -->
+          <span>10 minutes of meditation</span>
+
+        </div>
+
+
+        <!-- ---------------- Todo Item 4 ---------------- -->
+
+        <!-- Container for the fourth Todo item. -->
+        <div class="todo-item">
+
+          <!-- Checkbox used to mark the Todo as completed.
+               The checkbox can be checked and unchecked independently. -->
+          <input
+            type="checkbox"
+            aria-label="Mark read for 30 minutes as completed"
+          >
+
+          <!-- Text describing the Todo. -->
+          <span>read for 30 minutes</span>
+
+        </div>
+
+
+        <!-- ---------------- Todo Item 5 ---------------- -->
+
+        <!-- Container for the fifth Todo item. -->
+        <div class="todo-item">
+
+          <!-- Checkbox used to mark the Todo as completed.
+               The checkbox can be checked and unchecked independently. -->
+          <input
+            type="checkbox"
+            aria-label="Mark pick up groceries as completed"
+          >
+
+          <!-- Text describing the Todo. -->
+          <span>pick up groceries</span>
+
+        </div>
+
+
+        <!-- ---------------- Todo Item 6 ---------------- -->
+
+        <!-- Container for the sixth Todo item. -->
+        <div class="todo-item">
+
+          <!-- Checkbox used to mark the Todo as completed.
+               The checkbox can be checked and unchecked independently. -->
+          <input
+            type="checkbox"
+            aria-label="Mark complete todo app as completed"
+          >
+
+          <!-- Text describing the Todo. -->
+          <span>complete todo app</span>
+
+        </div>
+
+
+        <!-- ---------------- Todo Filters ---------------- -->
+
+        <!-- Container for the Todo item count and filter buttons. -->
+        <div class="filters">
+
+          <!-- Display the number of active Todo items.
+               This value is currently static and will later be
+               updated dynamically using JavaScript. -->
+          <span class="items-left">6 items left</span>
+
+
+          <!-- Group all filter buttons together. -->
+          <div class="filter-buttons">
+
+            <!-- Show all Todo items.
+                 JavaScript will later control this button's functionality. -->
+            <button>All</button>
+
+            <!-- Show only active Todo items.
+                 JavaScript will later control this button's functionality. -->
+            <button>Active</button>
+
+            <!-- Show only completed Todo items.
+                 JavaScript will later control this button's functionality. -->
+            <button>Completed</button>
+
+            <!-- Remove all completed Todo items.
+                 JavaScript will later control this button's functionality. -->
+            <button>Clear Completed</button>
+
+          </div>
+
+        </div>
+
+
+      <!-- Close the Todo list container. -->
+      </div>
+
+
+    <!-- Close the main Todo content container. -->
+    </section>
+
+
+  </main>
+
+
+  <!-- ---------------- Footer / Attribution ---------------- -->
+
+  <!-- Footer containing the Frontend Mentor attribution. -->
+  <footer class="attribution">
+
+    <!-- Link to the Frontend Mentor website. -->
+    Challenge by
+
+    <a href="https://www.frontendmentor.io">
+      Frontend Mentor
+    </a>.
+
+
+    <!-- Project author. -->
+    Coded by
+
+    <a href="#">
+      SHIRIN MOHAJERI
+    </a>.
+
+  </footer>
+
+
+</body>
+
+</html>
+```
