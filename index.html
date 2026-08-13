@@ -23,6 +23,13 @@
 
   <!-- Link the external CSS file to style the HTML elements. -->
   <link rel="stylesheet" href="style.css">
+   <!--
+    The "defer" attribute tells the browser to download the JavaScript file
+    while parsing the HTML, but wait to execute it until the HTML document
+    has been fully parsed.
+    
+    This allows the JavaScript to safely access HTML elements in the DOM.-->
+   <script src="script.js" defer></script>
 
   <!-- Page title shown in the browser tab. -->
   <title>Frontend Mentor | Todo app</title>
@@ -109,19 +116,14 @@
              This is currently only a visual control.
              Later, JavaScript will give it a real function. -->
         <input
-          type="checkbox"
-          aria-label="Mark new todo as completed"
-        >
+          type="checkbox" aria-label="Mark new todo as completed">
 
         <!-- Text input where the user can type a new Todo.
              The placeholder gives the user an example of what to enter. -->
         <input
-          type="text"
-          placeholder="Create a new todo..."
-        >
+          type="text" placeholder="Create a new todo...">
 
       </div>
-
 
       <!-- ---------------- Todo List ---------------- -->
 
@@ -137,10 +139,7 @@
           <!-- Checkbox used to mark this Todo as completed.
                Each Todo has its own independent checkbox,
                so multiple Todo items can be completed at the same time. -->
-          <input
-            type="checkbox"
-            aria-label="Mark Complete online JavaScript course as completed"
-          >
+          <input type="checkbox" id="todo-checkbox-1" aria-label="Mark Complete online JavaScript course as completed">
 
           <!-- Text describing the Todo. -->
           <span>Complete online JavaScript course</span>
@@ -156,9 +155,7 @@
           <!-- Checkbox used to mark the Todo as completed.
                The checkbox can be checked and unchecked independently. -->
           <input
-            type="checkbox"
-            aria-label="Mark Job around the park 3x as completed"
-          >
+            type="checkbox" aria-label="Mark Job around the park 3x as completed">
 
           <!-- Text describing the Todo. -->
           <span>Job around the park 3x</span>
@@ -174,9 +171,7 @@
           <!-- Checkbox used to mark the Todo as completed.
                The checkbox can be checked and unchecked independently. -->
           <input
-            type="checkbox"
-            aria-label="Mark 10 minutes of meditation as completed"
-          >
+            type="checkbox" aria-label="Mark 10 minutes of meditation as completed">
 
           <!-- Text describing the Todo. -->
           <span>10 minutes of meditation</span>
@@ -192,9 +187,7 @@
           <!-- Checkbox used to mark the Todo as completed.
                The checkbox can be checked and unchecked independently. -->
           <input
-            type="checkbox"
-            aria-label="Mark read for 30 minutes as completed"
-          >
+            type="checkbox" aria-label="Mark read for 30 minutes as completed">
 
           <!-- Text describing the Todo. -->
           <span>read for 30 minutes</span>
@@ -210,9 +203,7 @@
           <!-- Checkbox used to mark the Todo as completed.
                The checkbox can be checked and unchecked independently. -->
           <input
-            type="checkbox"
-            aria-label="Mark pick up groceries as completed"
-          >
+            type="checkbox" aria-label="Mark pick up groceries as completed">
 
           <!-- Text describing the Todo. -->
           <span>pick up groceries</span>
@@ -228,9 +219,7 @@
           <!-- Checkbox used to mark the Todo as completed.
                The checkbox can be checked and unchecked independently. -->
           <input
-            type="checkbox"
-            aria-label="Mark complete todo app as completed"
-          >
+            type="checkbox" aria-label="Mark complete todo app as completed">
 
           <!-- Text describing the Todo. -->
           <span>complete todo app</span>
@@ -254,7 +243,7 @@
 
             <!-- Show all Todo items.
                  JavaScript will later control this button's functionality. -->
-            <button>All</button>
+            <button  id="all-button">All</button>
 
             <!-- Show only active Todo items.
                  JavaScript will later control this button's functionality. -->
@@ -305,7 +294,6 @@
     </a>.
 
   </footer>
-
 
 </body>
 

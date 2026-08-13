@@ -1,117 +1,159 @@
-/* Apply border-box sizing to all HTML elements.
-   This makes width and height include padding and border. */
+/* ============================================================
+   1. Global Box Sizing
+   ============================================================ */
+
+/*
+  Apply border-box sizing to all HTML elements.
+
+  With border-box, the declared width and height of an element
+  include its padding and border.
+*/
 * {
   box-sizing: border-box;
 }
 
 
-/* ---------------- Body ---------------- */
+/* ============================================================
+   2. Body
+   ============================================================ */
 
-/* Style the entire webpage body */
+/*
+  Style the entire webpage body.
+*/
 body {
-  /* Remove the browser's default margin */
+
+  /* Remove the browser's default margin. */
   margin: 0;
 
-  /* Set the dark background color of the page */
+  /* Set the dark background color of the page. */
   background-color: hsl(235, 21%, 11%);
 }
 
 
-/* ---------------- Main Container ---------------- */
+/* ============================================================
+   3. Main Container
+   ============================================================ */
 
-/* Main container of the Todo application */
+/*
+  Main container of the Todo application.
+*/
 main {
-  /* Allow elements inside main to be positioned relative to it */
+
+  /* Allow elements inside main to be positioned relative to it. */
   position: relative;
 
-  /* Make main at least as tall as the browser window */
+  /* Make main at least as tall as the browser window. */
   min-height: 100vh;
 }
 
 
-/* ---------------- Background Image ---------------- */
+/* ============================================================
+   4. Background Image
+   ============================================================ */
 
-/* Style the desktop background image */
+/*
+  Style the desktop background image.
+*/
 .bg-desktop {
-  /* Position the image independently from normal document flow */
+
+  /* Position the image independently from normal document flow. */
   position: absolute;
 
-  /* Place the image at the top-left corner of main */
+  /* Place the image at the top-left corner of main. */
   top: 0;
   left: 0;
 
-  /* Make the image fill the full width of the screen */
+  /* Make the image fill the full width of the screen. */
   width: 100%;
 
-  /* Set the height of the background area */
+  /* Set the height of the background area. */
   height: 300px;
 
-  /* Make the image cover the entire area without stretching */
+  /* Make the image cover the entire area without stretching. */
   object-fit: cover;
 }
 
 
-/* ---------------- TODO Title ---------------- */
+/* ============================================================
+   5. TODO Title Container
+   ============================================================ */
 
-/* Main container that contains the "TODO" heading */
+/*
+  Main container that contains the "TODO" heading.
+*/
 .todo-container {
-  /* Keep this container positioned above the background image */
+
+  /* Keep this container positioned above the background image. */
   position: relative;
 
-  /* Set a fixed width for the Todo content */
+  /* Set a fixed width for the Todo content. */
   width: 500px;
 
-  /* Center the container horizontally */
+  /* Center the container horizontally. */
   margin: 0 auto;
 
-  /* Add space above the title */
+  /* Add space above the title. */
   padding-top: 50px;
 
-  /* Set the title color */
+  /* Set the title color. */
   color: white;
 
-  /* Set the font used inside the container */
+  /* Set the font used inside the container. */
   font-family: Arial, sans-serif;
 
-  /* Set the title font size */
+  /* Set the title font size. */
   font-size: 35px;
 
-  /* Add space between the letters of "TODO" */
+  /* Add space between the letters of "TODO". */
   letter-spacing: 10px;
 }
 
 
-/* ---------------- Todo Content ---------------- */
+/* ============================================================
+   6. Todo Content Container
+   ============================================================ */
 
-/* Main container for the Todo input and Todo list */
+/*
+  Main container for the Todo input and Todo list.
+*/
 .todo-container1 {
-  /* Keep the Todo content above the background */
+
+  /* Keep the Todo content above the background. */
   position: relative;
 
-  /* Use the same width as the title container */
+  /* Use the same width as the title container. */
   width: 500px;
 
-  /* Center the container horizontally
-     and add 20px margin above and below */
+  /*
+    Center the container horizontally
+    and add 20px margin above and below.
+  */
   margin: 20px auto;
 
-  /* Set the text color */
+  /* Set the text color. */
   color: white;
 
-  /* Set the font used for the Todo content */
+  /* Set the font used for the Todo content. */
   font-family: Arial, sans-serif;
 
-  /* Set the default text size */
+  /* Set the default text size. */
   font-size: 16px;
 }
 
 
-/* ---------------- Old Create New Todo Selector ---------------- */
+/* ============================================================
+   7. Old Create New Todo Selector — Learning Note
+   ============================================================ */
 
-/* This was the previous selector.
-   It selected the first direct <div> inside .todo-container1.
-   We are keeping it here as a comment for learning purposes.
-   We replaced it with the more specific .todo-input class. */
+/*
+  This was the previous selector.
+
+  It selected the first direct <div> inside .todo-container1.
+
+  We are keeping it here as a learning example.
+
+  We replaced it with the more specific .todo-input class.
+*/
 
 /*
 .todo-container1 > div:first-child {
@@ -124,284 +166,393 @@ main {
 */
 
 
-/* ---------------- Create New Todo Input ---------------- */
+/* ============================================================
+   8. Create New Todo Input
+   ============================================================ */
 
-/* Select the container used for creating a new Todo.
-   ".todo-input" targets the element with class="todo-input".
-   This keeps the Create Todo section separate from
-   the individual Todo items in the list. */
+/*
+  Select the container used for creating a new Todo.
+
+  ".todo-input" targets the element with class="todo-input".
+
+  This keeps the Create Todo section separate from
+  the individual Todo items in the list.
+*/
 .todo-input {
 
-  /* Give the Create Todo box a dark card background */
+  /* Give the Create Todo box a dark card background. */
   background-color: hsl(235, 24%, 19%);
 
-  /* Add space inside the box */
+  /* Add space inside the box. */
   padding: 18px;
 
-  /* Round the corners of the box */
+  /* Round the corners of the box. */
   border-radius: 5px;
 
-  /* Put the checkbox and text input on the same row */
+  /* Put the checkbox and text input on the same row. */
   display: flex;
 
-  /* Vertically center the checkbox and text input */
+  /* Vertically center the checkbox and text input. */
   align-items: center;
 }
 
-/* ---------------- Allow each TODO letter to move independently ---------------- */
 
-/* Allow each TODO letter to be moved independently */
+/* ============================================================
+   9. Allow Each TODO Letter to Move Independently
+   ============================================================ */
+
+/*
+  Allow each TODO letter to be moved independently.
+
+  inline-block allows transform and animation
+  to work correctly on each span.
+*/
 .todo-container h1 span {
   display: inline-block;
 }
 
 
-/* ---------------- TODO Letter Movement ---------------- */
+/* ============================================================
+   10. TODO Letter Movement Animation
+   ============================================================ */
 
-/* Define a smooth vertical movement for each TODO letter */
+/*
+  Define a smooth vertical movement for each TODO letter.
+*/
 @keyframes todo-letter-move {
 
-  /* Keep the letter at its original position
-     X = 0 → the element does not move left or right.
-     Y = 0 → the element does not move up or down.*/
+  /*
+    Keep the letter at its original position.
+
+    X = 0 → no horizontal movement.
+    Y = 0 → no vertical movement.
+  */
   0% {
     transform: translate(0, 0);
   }
 
-  /* Move the letter 10px upward
-     X = 0 → horizontal position stays unchanged
-     Y = -10px → move upward */
+  /*
+    Move the letter 10px upward.
+
+    X = 0 → horizontal position stays unchanged.
+    Y = -10px → move upward.
+  */
   50% {
     transform: translate(0, -10px);
   }
 
-  /* Return the letter to its original position
-     X = 0 → no horizontal movement
-     Y = 0 → return to the original vertical position */
+  /*
+    Return the letter to its original position.
+
+    X = 0 → no horizontal movement.
+    Y = 0 → return to the original position.
+  */
   100% {
     transform: translate(0, 0);
   }
 }
 
-/* ---------------- Apply TODO Letter Animation ---------------- */
 
-/* Apply the animation to the first TODO letter */
+/* ============================================================
+   11. Apply TODO Letter Animation
+   ============================================================ */
+
+/*
+  Apply the animation to the first TODO letter.
+*/
 .todo-container h1 span:first-child {
   animation: todo-letter-move 1s ease-in-out infinite;
 }
 
 
-/* Apply the animation to the second TODO letter
-   and start it slightly after the first letter */
+/*
+  Apply the animation to the second TODO letter
+  and start it slightly after the first letter.
+*/
 .todo-container h1 span:nth-child(2) {
   animation: todo-letter-move 1s ease-in-out infinite;
   animation-delay: 0.2s;
 }
 
 
-/* Apply the animation to the third TODO letter
-   and start it after the second letter */
+/*
+  Apply the animation to the third TODO letter
+  and start it after the second letter.
+*/
 .todo-container h1 span:nth-child(3) {
   animation: todo-letter-move 1s ease-in-out infinite;
   animation-delay: 0.4s;
 }
 
 
-/* Apply the animation to the fourth TODO letter
-   and start it after the third letter */
+/*
+  Apply the animation to the fourth TODO letter
+  and start it after the third letter.
+*/
 .todo-container h1 span:nth-child(4) {
   animation: todo-letter-move 1s ease-in-out infinite;
   animation-delay: 0.6s;
 }
-/* ---------------- Text Input ---------------- */
 
-/* Select any text input inside .todo-container1 */
+
+/* ============================================================
+   12. Text Input
+   ============================================================ */
+
+/*
+  Select any text input inside .todo-container1.
+*/
 .todo-container1 input[type="text"] {
-  /* Make the text input use all remaining horizontal space */
+
+  /* Make the text input use all remaining horizontal space. */
   flex: 1;
 
-  /* Remove the default input background */
+  /* Remove the default input background. */
   background: transparent;
 
-  /* Remove the default input border */
+  /* Remove the default input border. */
   border: none;
 
-  /* Remove the default focus outline */
+  /* Remove the default focus outline. */
   outline: none;
 
-  /* Set the text color */
+  /* Set the text color. */
   color: white;
 
-  /* Set the text size */
+  /* Set the text size. */
   font-size: 16px;
 
-  /* Add space between the checkbox and text input */
+  /* Add space between the checkbox and text input. */
   margin-left: 10px;
 }
 
 
-/* ---------------- Individual Todo Items ---------------- */
+/* ============================================================
+   13. Individual Todo Items
+   ============================================================ */
 
-/* Style each individual Todo row */
+/*
+  Style each individual Todo row.
+*/
 .todo-item {
-  /* Give each Todo a dark background */
+
+  /* Give each Todo a dark background. */
   background-color: hsl(235, 24%, 19%);
 
-  /* Add space inside each Todo row */
+  /* Add space inside each Todo row. */
   padding: 18px;
 
-  /* Add a line between Todo items */
+  /* Add a line between Todo items. */
   border-bottom: 1px solid hsl(233, 14%, 30%);
 
-  /* Round the corners */
+  /* Round the corners. */
   border-radius: 10px;
 
-  /* Arrange the checkbox and Todo text in one horizontal row */
+  /* Arrange the checkbox and Todo text in one horizontal row. */
   display: flex;
 
-  /* Vertically center the checkbox and text */
+  /* Vertically center the checkbox and text. */
   align-items: center;
 }
 
 
-/* ---------------- Todo Text Spacing ---------------- */
+/* ============================================================
+   14. Todo Text Spacing
+   ============================================================ */
 
-/* Add space between the checkbox and Todo text */
+/*
+  Add space between the checkbox and Todo text.
+*/
 .todo-item span {
   margin-left: 15px;
 }
 
-/* ---------------- Filter Layout ---------------- */
 
-/* Arrange the item count and filter buttons in one horizontal row */
+/* ============================================================
+   15. Filter Layout
+   ============================================================ */
+
+/*
+  Arrange the item count and filter buttons
+  in one horizontal row.
+*/
 .filters {
-  /* Use Flexbox to arrange the elements in a row */
+
+  /* Use Flexbox to arrange the elements in a row. */
   display: flex;
 
-  /* Put the item count on the left
-     and the filter buttons on the right */
+  /*
+    Put the item count on the left
+    and the filter buttons on the right.
+  */
   justify-content: space-between;
 
-  /* Vertically center all elements in the row */
+  /* Vertically center all elements in the row. */
   align-items: center;
 
-  /* Add space inside the filter section */
+  /* Add space inside the filter section. */
   padding: 15px;
 
-  /* Set the default text size */
+  /* Set the default text size. */
   font-size: 12px;
 }
 
 
-/* ---------------- Filter Buttons Group ---------------- */
+/* ============================================================
+   16. Filter Buttons Group
+   ============================================================ */
 
-/* Group all filter buttons together */
+/*
+  Group all filter buttons together.
+*/
 .filter-buttons {
-  /* Arrange the buttons in a horizontal row */
+
+  /* Arrange the buttons in a horizontal row. */
   display: flex;
 
-  /* Add equal space between the filter buttons */
+  /* Add equal space between the filter buttons. */
   gap: 20px;
 }
 
 
-/* ---------------- Items Left ---------------- */
+/* ============================================================
+   17. Items Left
+   ============================================================ */
 
-/* Display the number of active Todo items */
+/*
+  Display the number of active Todo items.
+*/
 .items-left {
-  /* Make the text smaller */
+
+  /* Make the text smaller. */
   font-size: 12px;
 
-  /* Make the item count less noticeable by using a lighter gray color */
+  /*
+    Make the item count less noticeable
+    by using a lighter gray color.
+  */
   color: hsl(233, 14%, 60%);
 }
 
 
-/* ---------------- Style Each Filter Button ---------------- */
+/* ============================================================
+   18. Filter Buttons
+   ============================================================ */
 
-/* Style each filter button inside the filters container */
+/*
+  Style each filter button inside the filters container.
+*/
 .filters button {
-  /* Remove the browser's default button background */
+
+  /* Remove the browser's default button background. */
   background: none;
 
-  /* Remove the browser's default button border */
+  /* Remove the browser's default button border. */
   border: none;
 
-  /* Make the button text light */
+  /* Make the button text light. */
   color: hsl(233, 14%, 60%);
 
-  /* Show a pointer cursor when hovering over the button */
+  /* Show a pointer cursor when hovering over it. */
   cursor: pointer;
 
-  /* Set the font size */
+  /* Set the font size. */
   font-size: 12px;
 }
 
 
-/* ---------------- Todo List Container ---------------- */
+/* ============================================================
+   19. Todo List Container
+   ============================================================ */
 
-/* Main card containing all Todo items and filters */
+/*
+  Main card containing all Todo items and filters.
+*/
 .todo-list {
-  /* Give the Todo list a dark card background */
+
+  /* Give the Todo list a dark card background. */
   background-color: hsl(235, 24%, 19%);
 
-  /* Round the corners of the entire card */
+  /* Round the corners of the entire card. */
   border-radius: 5px;
 
-  /* Prevent child elements from overflowing
-     outside the rounded corners */
+  /*
+    Prevent child elements from overflowing
+    outside the rounded corners.
+  */
   overflow: hidden;
 
-  /* Add space between the Create Todo box and Todo list */
+  /* Add space between the Create Todo box and Todo list. */
   margin-top: 20px;
 }
 
 
-/* ---------------- Old Custom Radio Button ---------------- */
+/* ============================================================
+   20. Old Custom Radio Button — Learning Note
+   ============================================================ */
 
-/* This selector was used when Todo completion used radio buttons.
-   We keep this information as a learning note.
-   The active CSS has now been changed to target checkboxes. */
+/*
+  This selector was used when Todo completion
+  used radio buttons.
+
+  We keep this information as a learning note.
+
+  The active CSS has now been changed to target checkboxes.
+*/
 
 
-/* ---------------- Custom Checkbox ---------------- */
+/* ============================================================
+   21. Custom Checkbox
+   ============================================================ */
 
-/* Select all checkbox controls inside the Todo container.
-   We use a checkbox because each Todo can be checked
-   and unchecked independently. */
+/*
+  Select all checkbox controls inside the Todo container.
+
+  We use a checkbox because each Todo can be
+  checked and unchecked independently.
+*/
 .todo-container1 input[type="checkbox"] {
 
-  /* Remove the browser's default checkbox design.
-     This allows us to create our own custom appearance. */
+  /*
+    Remove the browser's default checkbox design.
+
+    This allows us to create our own custom appearance.
+  */
   appearance: none;
 
-  /* Set the width of the custom checkbox */
+  /* Set the width of the custom checkbox. */
   width: 20px;
 
-  /* Set the height of the custom checkbox */
+  /* Set the height of the custom checkbox. */
   height: 20px;
 
-  /* Add a border around the checkbox */
+  /* Add a border around the checkbox. */
   border: 1px solid hsl(233, 14%, 35%);
 
-  /* Make the checkbox circular */
+  /* Make the checkbox circular. */
   border-radius: 50%;
 
-  /* Show a pointer cursor when the user hovers over the checkbox */
+  /* Show a pointer cursor when hovering over the checkbox. */
   cursor: pointer;
 
-  /* Prevent the checkbox from becoming smaller
-     inside the Flexbox layout */
+  /*
+    Prevent the checkbox from becoming smaller
+    inside the Flexbox layout.
+  */
   flex-shrink: 0;
 }
 
 
-/* ---------------- Checked Checkbox ---------------- */
+/* ============================================================
+   22. Checked Checkbox
+   ============================================================ */
 
-/* Style the checkbox when it is checked */
+/*
+  Style the checkbox when it is checked.
+*/
 .todo-container1 input[type="checkbox"]:checked {
 
-  /* Apply a blue-to-purple gradient when checked */
+  /* Apply a blue-to-purple gradient when checked. */
   background: linear-gradient(
     135deg,
     hsl(192, 100%, 67%),
@@ -410,56 +561,88 @@ main {
 }
 
 
-/* ---------------- Completed Todo ---------------- */
+/* ============================================================
+   23. Previous Completed Todo Method — Learning Note
+   ============================================================ */
 
-/* Select the Todo text when its checkbox is checked.
-   The ":has()" selector checks whether the Todo item
-   contains a checked checkbox.
+/*
+  This method uses the CSS :has() selector.
 
-   When the checkbox is checked, the Todo is considered completed. */
+  It checks whether the Todo item contains
+  a checked checkbox.
+
+  This method works without JavaScript.
+
+  We are keeping it as a learning example,
+  but our current JavaScript exercise uses
+  the "completed" class instead.
+*/
+
+/*
 .todo-item:has(input[type="checkbox"]:checked) span {
-
-  /* Draw a line through the completed Todo text */
   text-decoration: line-through;
-
-  /* Make completed text darker and less prominent */
   color: hsl(233, 14%, 35%);
 }
+*/
 
-/* ---------------- Hover Effect ---------------- */
 
-/* Change the filter button appearance when the mouse is over it */
+/* ============================================================
+   24. Hover Effect
+   ============================================================ */
+
+/*
+  Change the filter button appearance
+  when the mouse is over it.
+*/
 .filters button:hover {
-  /* Change the text color when hovering */
+
+  /* Change the text color when hovering. */
   color: rgb(130, 7, 139);
 
-  /* Make the filter text bold when hovering */
+  /* Make the filter text bold when hovering. */
   font-weight: bold;
 }
 
+
+/*
+  Change the attribution appearance
+  when the mouse is over it.
+*/
 .attribution:hover {
   color: rgb(130, 7, 139);
   font-weight: bold;
 }
 
 
-/* ---------------- Responsive Design ---------------- */
+/* ============================================================
+   25. Responsive Design
+   ============================================================ */
 
-/* Apply these styles when the screen width is 600px or smaller.
-   This makes the Todo App fit comfortably on small screens,
-   including mobile devices. */
+/*
+  Apply these styles when the screen width
+  is 600px or smaller.
+
+  This makes the Todo App fit comfortably
+  on small screens, including mobile devices.
+*/
 @media (max-width: 600px) {
 
-  /* Make the TODO title container responsive.
-     40px is removed from the total width to create
-     20px space on both the left and right sides. */
+  /*
+    Make the TODO title container responsive.
+
+    40px is removed from the total width to create
+    20px space on both the left and right sides.
+  */
   .todo-container {
     width: calc(100% - 40px);
   }
 
 
-  /* Make the Todo content container responsive.
-     The content will not exceed the available screen width. */
+  /*
+    Make the Todo content container responsive.
+
+    The content will not exceed the available screen width.
+  */
   .todo-container1 {
     width: calc(100% - 40px);
   }
@@ -469,4 +652,33 @@ main {
   .bg-desktop {
     height: 250px;
   }
+}
+
+
+/* ============================================================
+   26. Completed Todo Item — JavaScript Method
+   ============================================================ */
+
+/*
+  JavaScript adds the "completed" class to the Todo item.
+
+  Once the class is added, this CSS rule changes
+  the appearance of the Todo text.
+
+  The selector:
+
+  .todo-item.completed span
+
+  means:
+
+  Find a <span> inside an element that has BOTH
+  "todo-item" and "completed" classes.
+*/
+.todo-item.completed span {
+
+  /* Draw a line through the completed Todo text. */
+  text-decoration: line-through;
+
+  /* Make the completed Todo appear less prominent. */
+  opacity: 0.5;
 }
