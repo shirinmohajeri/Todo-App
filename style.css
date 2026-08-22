@@ -682,3 +682,35 @@ main {
   /* Make the completed Todo appear less prominent. */
   opacity: 0.5;
 }
+
+/* ============================================================
+   27. Delete Button
+   ============================================================ */
+
+/* Style the delete button inside each Todo. */
+.todo-item button {
+
+  /* Remove the default button background. */
+  background: none;
+
+  /* Remove the default button border. */
+  border: none;
+
+  /* Set the X icon color. */
+  color: hsl(233, 14%, 60%);
+
+  /* Show a pointer when hovering. */
+  cursor: pointer;
+
+  /* Push the button to the right side. */
+  margin-right: auto;
+
+  /* Center the SVG inside the button. */
+  display: flex;
+}
+
+
+/* Change the X color when hovering. */
+.todo-item button:hover {
+  color: hsl(279, 86%, 75%);
+}
