@@ -2,111 +2,326 @@
 
 ![Design preview for the Todo app coding challenge](preview.jpg)
 
-## Welcome! 👋
+# ✨ Todo Dashboard
 
-Thanks for checking out this front-end coding challenge.
+<p align="center">
+  A modern and responsive Todo Dashboard built progressively with HTML, CSS and JavaScript.
+</p>
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/TypeScript-Planned-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+</p>
 
-**To do this challenge, you need a good understanding of HTML, CSS and JavaScript.**
+---
 
-## The challenge
+## 🖥️ Preview
 
-Your challenge is to build out this todo app and get it looking as close to the design as possible.
+A clean and responsive Todo application designed to manage daily tasks.
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+The project is gradually evolving from a simple Todo App into a complete **Productivity Dashboard**.
 
-Your users should be able to:
+---
 
-- View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Add new todos to the list
-- Mark todos as complete
-- Delete todos from the list
-- Filter by all/active/complete todos
-- Clear all completed todos
-- Toggle light and dark mode
-- **Bonus**: Drag and drop to reorder items on the list
+## ✨ Features
 
-### Want some support on the challenge? 
+### Current Features
 
-[Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+- ✅ Create new Todos
+- ✅ Complete Todos
+- ✅ Uncomplete Todos
+- ✅ Edit Todos
+- ✅ Delete Todos
+- ✅ Active Todo counter
+- ✅ Custom checkboxes
+- ✅ Completed Todo styling
+- ✅ Responsive layout
+- ✅ Animated Todo title
+- ✅ Interactive UI
 
-## Where to find everything
+### Planned Features
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
+- 🔄 Todo filters
+- 🔄 Clear completed Todos
+- 🔄 Local Storage
+- 🔄 Dashboard statistics
+- 🔄 Weather information
+- 🔄 Search and sorting
+- 🔄 Task priorities
+- 🔄 Due dates
+- 🔄 TypeScript
+- 🔄 REST API
+- 🔄 Node.js + Express
+- 🔄 PostgreSQL
+- 🔄 Docker
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
+---
 
-If you would like the Figma design file to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+## 🎨 Design
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+The application focuses on a clean and modern interface with:
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- Responsive design
+- Dark theme
+- Custom UI components
+- Smooth animations
+- Interactive elements
+- Mobile-friendly layout
+- Clear task organization
 
-## Using AI coding assistants
+The original design is inspired by the
+[Frontend Mentor Todo App Challenge](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW).
 
-We've included two files to help you if you're using AI coding assistants (like Claude, GitHub Copilot, Cursor, etc.) while working on this challenge:
+---
 
-- `AGENTS.md` - Contains detailed instructions for AI assistants on how to help you with this challenge. It's tailored to this challenge's difficulty level, so the AI will provide guidance appropriate to your learning stage—offering more support for beginner challenges and encouraging more independence on advanced ones.
-- `CLAUDE.md` - A pointer file that directs Claude-based tools to the AGENTS.md instructions.
+## 📊 Dashboard Vision
 
-**How to use them:** You don't need to do anything! These files are automatically detected by most AI coding tools. The AI will read them and adjust its behavior to be a better learning partner—guiding you toward solutions rather than just giving you the answers.
+The Todo App will gradually evolve into a productivity dashboard.
 
-**Note:** These files are designed to help you *learn*, not to do the work for you. The AI is instructed to ask questions, give hints, and explain concepts rather than writing complete solutions.
+### Planned Dashboard
 
-## Building your project
+| Section | Description |
+|---|---|
+| 📝 Todos | Create and manage daily tasks |
+| 📊 Statistics | Display task and productivity statistics |
+| 🌤️ Weather | Show current weather information |
+| 📅 Date & Time | Display current date and time |
+| 📈 Progress | Visualize task completion |
+| 🔍 Search | Quickly find tasks |
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+---
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+## 🌤️ Weather
 
-## Deploying your project
+A weather section will be added to the dashboard in a future phase.
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+Possible information includes:
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+- Current temperature
+- Weather condition
+- Location
+- Humidity
+- Wind speed
+- Weather icon
+- Forecast
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://www.frontendmentor.io/guides/hosting-your-solution).
+Weather data will eventually be retrieved from a weather API.
 
-## Create a custom `README.md`
+---
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+## 🛠️ Tech Stack
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+### Frontend
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+- HTML5
+- CSS3
+- JavaScript
+- TypeScript
 
-## Submitting your solution
+### Backend
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://www.frontendmentor.io/guides/how-to-submit-solutions) for tips on how to do this.
+- Node.js
+- Express
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+### Database
 
-## Sharing your solution
+- PostgreSQL
 
-There are multiple places you can share your solution:
+### Tools
 
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community).
-2. Share on [X (formerly Twitter)](https://x.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in your post. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on [LinkedIn](https://www.linkedin.com/company/frontend-mentor/).
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+- Visual Studio Code
+- Git
+- GitHub
+- npm
+- Browser DevTools
+- Postman
+- Docker
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
+---
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+## 📚 Project Roadmap
 
-## Got feedback for us?
+```text
+HTML + CSS
+     ↓
+JavaScript Fundamentals
+     ↓
+DOM Manipulation & Events
+     ↓
+Todo CRUD
+     ↓
+Local Storage
+     ↓
+Code Organization
+     ↓
+Dashboard UI
+     ↓
+Weather API
+     ↓
+TypeScript
+     ↓
+REST API
+     ↓
+Node.js + Express
+     ↓
+PostgreSQL
+     ↓
+Docker
+     ↓
+Testing
+```
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+---
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+## 🗂️ Planned Architecture
 
-**Have fun building!** 🚀
+The final project is expected to have an architecture similar to:
+
+```text
+Todo Dashboard
+│
+├── Frontend
+│   ├── HTML
+│   ├── CSS
+│   ├── JavaScript / TypeScript
+│   └── Fetch API
+│
+├── Backend
+│   ├── Node.js
+│   ├── Express
+│   └── TypeScript
+│
+├── Database
+│   └── PostgreSQL
+│
+├── Docker
+│   ├── Frontend
+│   ├── Backend
+│   └── PostgreSQL
+│
+└── GitHub
+    └── Project Documentation
+```
+
+---
+
+## 📁 Current Project Structure
+
+```text
+Todo-App/
+│
+├── images/
+│
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+```
+
+The structure will be updated as the project grows.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/shirinmohajeri/Todo-App.git
+```
+
+### 2. Open the project
+
+Open the project folder in Visual Studio Code.
+
+### 3. Run the application
+
+Open `index.html` in your browser.
+
+For development, using the **Live Server** extension in VS Code is recommended.
+
+---
+
+## 🔄 Development Process
+
+The application is being developed progressively.
+
+Each feature is implemented, tested, and integrated into the existing project before moving to the next stage.
+
+```text
+Plan
+ ↓
+Code
+ ↓
+Run
+ ↓
+Test
+ ↓
+Fix
+ ↓
+Improve
+ ↓
+Commit
+```
+
+---
+
+## 📌 Current Status
+
+**Current Phase:** JavaScript Development
+
+### Completed
+
+- HTML structure
+- CSS styling
+- Responsive design
+- Todo creation
+- Todo completion
+- Todo editing
+- Todo deletion
+- Active Todo counter
+- Dynamic DOM manipulation
+- Event handling
+
+### Next Steps
+
+1. Improve Todo filtering
+2. Add Clear Completed
+3. Add Local Storage
+4. Improve application structure
+5. Upgrade the UI into a dashboard
+6. Add weather information
+7. Introduce TypeScript
+
+---
+
+## 🔮 Future Improvements
+
+Possible future features include:
+
+- 🌙 Dark / Light mode
+- 🌤️ Weather API
+- 📊 Productivity charts
+- 🏷️ Task categories
+- ⭐ Task priorities
+- 📅 Due dates
+- 🔍 Search
+- ↕️ Sorting
+- 👤 User authentication
+- 🔐 Protected API routes
+- 🗄️ Database persistence
+- 🧪 Automated testing
+
+---
+
+## 📄 License
+
+This project is created for educational and portfolio purposes.
+
+---
+
+<p align="center">
+  Built with ❤️ by <strong>Shirin Mohajeri</strong>
+</p>
